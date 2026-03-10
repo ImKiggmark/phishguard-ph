@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 include("../database/db.php");
 
@@ -15,9 +14,19 @@ WHEN risk_level='Medium' THEN 2
 ELSE 3
 END,
 created_at DESC";
-$result = $conn->query($sql);
 
+$result = $conn->query($sql);
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Dashboard</title>
+</head>
+
+<body>
+
+<?php include("../components/navbar.php"); ?>
 
 <h1>Admin Dashboard</h1>
 
@@ -32,6 +41,7 @@ $result = $conn->query($sql);
 <th>Title</th>
 <th>Platform</th>
 <th>Link</th>
+<th>Risk</th>
 <th>User ID</th>
 <th>Date</th>
 <th>Action</th>
@@ -46,6 +56,7 @@ echo "<tr>
 <td>".$row['title']."</td>
 <td>".$row['platform']."</td>
 <td>".$row['scam_link']."</td>
+<td>".$row['risk_level']."</td>
 <td>".$row['user_id']."</td>
 <td>".$row['created_at']."</td>
 <td>
@@ -59,6 +70,5 @@ echo "<tr>
 
 </table>
 
-<br><br>
-
-<a href="../logout.php">Logout</a>
+</body>
+</html>

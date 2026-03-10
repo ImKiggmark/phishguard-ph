@@ -23,6 +23,8 @@ $result = $conn->query($sql);
 
 <body>
 
+<?php include("../components/navbar.php"); ?>
+
 <h2>My Phishing Reports</h2>
 
 <table border="1" cellpadding="10">

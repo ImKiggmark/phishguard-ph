@@ -8,6 +8,16 @@ $result = $conn->query($sql);
 
 ?>
 
+<!DOCTYPE html>
+<html>
+<head>
+<title>Threat Intelligence Feed</title>
+</head>
+
+<body>
+
+<?php include("components/navbar.php"); ?>
+
 <h2>Threat Intelligence Feed</h2>
 
 <table border="1" cellpadding="10">
@@ -38,5 +48,5 @@ echo "<tr>
 
 </table>
 
-<br>
-<a href="dashboard.php">Back to Dashboard</a>
+</body>
+</html>

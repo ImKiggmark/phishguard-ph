@@ -54,6 +54,8 @@ echo "Error: ".$conn->error;
 
 <body>
 
+<?php include("../components/navbar.php"); ?>
+
 <h2>Submit Phishing Report</h2>
 
 <form method="POST">

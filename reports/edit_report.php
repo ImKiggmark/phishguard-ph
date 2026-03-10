@@ -35,6 +35,16 @@ header("Location: view_reports.php");
 
 ?>
 
+<!DOCTYPE html>
+<html>
+<head>
+<title>Edit Report</title>
+</head>
+
+<body>
+
+<?php include("../components/navbar.php"); ?>
+
 <h2>Edit Report</h2>
 
 <form method="POST">
@@ -59,3 +69,6 @@ header("Location: view_reports.php");
 
 <br>
 <a href="view_reports.php">Back</a>
+
+</body>
+</html>
