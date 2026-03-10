@@ -21,6 +21,8 @@ exit();
 
 <a href="reports/submit_report.php">Submit Phishing Report</a>
 <br><br>
+<a href="reports/view_reports.php">View My Reports</a>
+<br><br>
 <a href="logout.php">Logout</a>
 
 </body>

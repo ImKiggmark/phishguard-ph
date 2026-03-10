@@ -16,8 +16,25 @@ $description = $_POST['description'];
 $link = $_POST['scam_link'];
 $user_id = $_SESSION['user_id'];
 
-$sql = "INSERT INTO reports(title,platform,description,scam_link,user_id)
-VALUES('$title','$platform','$description','$link','$user_id')";
+$text = strtolower($title . " " . $description . " " . $link);
+
+$risk = "Low";
+
+if(strpos($text,"bank") !== false ||
+   strpos($text,"login") !== false ||
+   strpos($text,"verify") !== false ||
+   strpos($text,"account") !== false ||
+   strpos($text,"password") !== false){
+    $risk = "High";
+}
+elseif(strpos($text,"promo") !== false ||
+       strpos($text,"free") !== false ||
+       strpos($text,"gcash") !== false){
+    $risk = "Medium";
+}
+
+$sql = "INSERT INTO reports(title,platform,description,scam_link,user_id,risk_level)
+VALUES('$title','$platform','$description','$link','$user_id','$risk')";
 
 if($conn->query($sql)){
 echo "Report submitted successfully!";
