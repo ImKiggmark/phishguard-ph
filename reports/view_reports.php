@@ -48,6 +48,17 @@ echo "<tr>
 <td>".$row['title']."</td>
 <td>".$row['platform']."</td>
 <td>".$row['scam_link']."</td>
+$risk = $row['risk_level'];
+
+$color = "green";
+
+if($risk == "High"){
+$color = "red";
+}elseif($risk == "Medium"){
+$color = "orange";
+}
+
+echo "<td style='color:$color;font-weight:bold;'>$risk</td>";
 <td>".$row['created_at']."</td>
 <td>
 <a href='edit_report.php?id=".$row['report_id']."'>Edit</a> |
