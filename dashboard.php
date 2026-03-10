@@ -33,6 +33,8 @@ $high = $conn->query("SELECT COUNT(*) as high FROM reports WHERE user_id='$user_
 <br><br>
 <a href="reports/view_reports.php">View My Reports</a>
 <br><br>
+<a href="threat_feed.php">Threat Intelligence Feed</a>
+<br><br>
 <a href="index.php">Back to Home</a>
 <br><br>
 <a href="logout.php">Logout</a>
