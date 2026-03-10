@@ -1,0 +1,95 @@
+/* GLOBAL */
+
+body{
+font-family: Inter, sans-serif;
+background:#f1f5f9;
+margin:0;
+padding:0;
+}
+
+/* NAVBAR */
+
+.navbar{
+background:#1d4ed8;
+padding:15px 40px;
+display:flex;
+gap:20px;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+font-weight:500;
+}
+
+.navbar a:hover{
+text-decoration:underline;
+}
+
+/* PAGE CONTAINER */
+
+.container{
+max-width:900px;
+margin:auto;
+padding:40px;
+}
+
+/* CARD */
+
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 12px 30px rgba(0,0,0,0.1);
+}
+
+/* BUTTON */
+
+.btn{
+display:inline-block;
+background:#1d4ed8;
+color:white;
+padding:10px 18px;
+border-radius:6px;
+text-decoration:none;
+margin-top:10px;
+}
+
+.btn:hover{
+background:#1e40af;
+}
+
+/* TABLE */
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+th, td{
+padding:12px;
+border-bottom:1px solid #e5e7eb;
+text-align:left;
+}
+
+th{
+background:#f3f4f6;
+}
+
+/* RISK COLORS */
+
+.risk-high{
+color:red;
+font-weight:bold;
+}
+
+.risk-medium{
+color:orange;
+font-weight:bold;
+}
+
+.risk-low{
+color:green;
+font-weight:bold;
+}

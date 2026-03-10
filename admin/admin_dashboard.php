@@ -21,6 +21,7 @@ $result = $conn->query($sql);
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="../assets/css/style.css">
 <title>Admin Dashboard</title>
 </head>
 

@@ -11,6 +11,7 @@ $result = $conn->query($sql);
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="assets/css/style.css">
 <title>Threat Intelligence Feed</title>
 </head>
 

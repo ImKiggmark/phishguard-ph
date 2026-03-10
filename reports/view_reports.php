@@ -18,6 +18,7 @@ $result = $conn->query($sql);
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="../assets/css/style.css">
 <title>My Reports</title>
 </head>
 
@@ -45,11 +46,6 @@ if($result->num_rows > 0){
 
 while($row = $result->fetch_assoc()){
 
-echo "<tr>
-<td>".$row['report_id']."</td>
-<td>".$row['title']."</td>
-<td>".$row['platform']."</td>
-<td>".$row['scam_link']."</td>
 $risk = $row['risk_level'];
 
 $color = "green";
@@ -60,7 +56,12 @@ $color = "red";
 $color = "orange";
 }
 
-echo "<td style='color:$color;font-weight:bold;'>$risk</td>";
+echo "<tr>
+<td>".$row['report_id']."</td>
+<td>".$row['title']."</td>
+<td>".$row['platform']."</td>
+<td>".$row['scam_link']."</td>
+<td style='color:$color;font-weight:bold;'>".$risk."</td>
 <td>".$row['created_at']."</td>
 <td>
 <a href='edit_report.php?id=".$row['report_id']."'>Edit</a> |

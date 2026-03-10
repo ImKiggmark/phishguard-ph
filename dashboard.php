@@ -19,6 +19,7 @@ $high = $conn->query("SELECT COUNT(*) as high FROM reports WHERE user_id='$user_
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="assets/css/style.css">
 <title>Dashboard</title>
 
 <style>
@@ -57,7 +58,9 @@ text-decoration:underline;
 
 <?php include("components/navbar.php"); ?>
 
-<div class="dashboard">
+<div class="container">
+
+<div class="card">
 
 <h1>Welcome <?php echo $_SESSION['name']; ?></h1>
 
@@ -68,15 +71,13 @@ text-decoration:underline;
 <p>Total Reports: <?php echo $total; ?></p>
 <p>High Risk Reports: <?php echo $high; ?></p>
 
-<a href="reports/submit_report.php">Submit Phishing Report</a>
+<a class="btn" href="reports/submit_report.php">Submit Phishing Report</a>
 
-<a href="reports/view_reports.php">View My Reports</a>
+<a class="btn" href="reports/view_reports.php">View My Reports</a>
 
-<a href="threat_feed.php">Threat Intelligence Feed</a>
+<a class="btn" href="threat_feed.php">Threat Intelligence Feed</a>
 
-<a href="index.php">Back to Home</a>
-
-<a href="logout.php">Logout</a>
+</div>
 
 </div>
 

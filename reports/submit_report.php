@@ -49,6 +49,7 @@ echo "Error: ".$conn->error;
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="../assets/css/style.css">
 <title>Submit Phishing Report</title>
 </head>
 

@@ -38,6 +38,7 @@ header("Location: view_reports.php");
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="../assets/css/style.css">
 <title>Edit Report</title>
 </head>
 
